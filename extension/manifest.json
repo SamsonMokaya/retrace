@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Retrace",
+  "version": "0.1.0",
+  "description": "AI memory for your browsing — capture visits and highlights, search by meaning.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "activeTab",
+    "scripting",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "http://localhost:8000/*",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Retrace"
+  }
+}
