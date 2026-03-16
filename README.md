@@ -2,6 +2,41 @@
 
 AI memory for your browsing: capture page visits and highlights, then ask questions in natural language. Uses semantic search (Chroma) and Amazon Bedrock (Nova Lite for chat, Titan for embeddings).
 
+## Problem
+
+People consume huge amounts of information online every day. We open dozens or hundreds of tabs, read articles, highlight text, and explore different topics. However, traditional browser history only stores URLs and timestamps. It does not capture meaning, context, or what we actually learned from those pages.
+
+Bookmarks require manual saving and organization, and many useful insights are lost because users forget where they saw something.
+
+As a result, valuable knowledge from browsing disappears quickly and becomes difficult to rediscover later.
+
+## Solution
+
+Retrace turns browsing activity into an AI-powered memory system. Instead of just storing URLs like browser history, it captures page visits and highlights, indexes them using semantic embeddings, and allows users to query their browsing history using natural language.
+
+This means users can ask questions like:
+
+- “What did I read about vector databases last week?”
+- “What did I highlight about AI agents?”
+- “What pages did I visit yesterday?”
+
+Retrace then searches through stored browsing data and returns relevant pages with context.
+
+## What Makes Retrace Different
+
+**Traditional browser history:**
+
+- Only stores URLs and timestamps
+- Cannot be searched semantically
+- Cannot answer questions about past browsing
+
+**Retrace:**
+
+- Stores browsing events as structured knowledge
+- Uses embeddings for semantic search
+- Allows natural language queries over browsing activity
+- Links answers directly to the original pages
+
 ## Prerequisites
 
 - **Python 3.10+**
