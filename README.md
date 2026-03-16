@@ -121,6 +121,23 @@ To clear all stored events and vectors (local only):
 curl -X POST http://localhost:8000/dev/reset
 ```
 
+## Future work
+
+Retrace is currently a local, single-user prototype designed for demo purposes. Some directions for future iterations:
+
+- **Accounts and sync**
+  - Add authentication and per-user accounts so each person has their own history instead of a shared local database.
+  - Host the backend so history can be accessed from anywhere (not just the machine where it was recorded).
+
+- **Smarter memory selection**
+  - Use Nova to decide whether a given page is worth storing at all, based on its content (for example: skip login/password-reset flows, payment pages, generic search results, error pages, and obviously sensitive content).
+  - Always store explicit user highlights, even if the rest of the page is discarded.
+  - Avoid repetition by de‑duplicating pages that are effectively the same as ones already stored so the memory stays focused on new information.
+
+- **Richer context and summaries**
+  - Generate short summaries of important pages to provide lightweight context when answering questions, while still respecting the privacy/sensitivity filters above.
+  - Let users control how much of a page (full text vs. short summary vs. only highlights) is kept in their long-term browsing memory.
+
 ## License
 
 Use and modify as you like.
